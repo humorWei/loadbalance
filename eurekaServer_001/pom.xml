@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>twostepsfromjava.cloud</groupId>
+        <artifactId>twostepsfromjava-cloud-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+	    <relativePath>../myparent</relativePath>
+	</parent>
+	
+	<artifactId>service-discovery</artifactId>
+	<packaging>war</packaging>
+	
+	<!-- 这里我们直接继承parent项目中的pom，所以只需要声明我们需要的新增的spring-cloud-starter-eureka-server依赖即可。 -->
+	<dependencies>
+		<dependency>
+		    <groupId>org.springframework.cloud</groupId>
+		    <artifactId>spring-cloud-starter-eureka-server</artifactId>
+		    <version>1.4.7.RELEASE</version>
+		</dependency>
+    </dependencies>    
+    
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>
